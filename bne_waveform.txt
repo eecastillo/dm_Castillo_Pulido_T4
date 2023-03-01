@@ -1,0 +1,40 @@
+{ "signal" : [
+  { "name": "PC",        "wave": "x3453x", "data": ["IF", "ID", "EX","IF",] },
+  { "name": "clk",         "wave": "P....." },
+  { "name": "reset",     "wave": "01...." },
+  { "name": "PC",        "wave": "=.=.", "data": ["0x400000", "0x400004"] },
+  { "name": "PCWrite",     "wave": "010." },
+  { "name": "BNE",     "wave": "0..1" },
+  { "name": "PCSource",		"wave": "0..1"},
+  { "name": "PCWriteCond",     "wave": "0..1"},
+    { "name": "A",        "wave": "=.=.", "data": ["0", "0x04", "0x07", "0x400008", "0"] },
+    { "name": "B",        "wave": "=.=.", "data": ["0", "0x03", "0x07", "0x400008", "0"] },
+  { "name": "ALUResult",        "wave": "====", "data": ["0", "0x400004", "0x400010", "1", "0"] },
+  { "name": "Imm",        "wave": "xx=.", "data": ["0x0C", "0x400004", "0x400004", "0x400008", "0"] },
+  { "name": "IR",        "wave": "x.=.", "data": ["0x01249663"] },
+    { "name": "ALUROut",        "wave": "=.==", "data": ["0", "0x400004", "0x400010", "0"] },
+    { "name": "IRWrite",     "wave": "010." },
+  { "name": "IorD",     "wave": "0..." },
+  { "name": "MemRead",     "wave": "010." },
+  { "name": "MemWrite",    "wave": "0..." },
+  { "name": "MemtoReg",     "wave": "0..." },
+
+{ "name": "RegWrite",     "wave": "0..." },
+  { "name": "ALUOp",        "wave": "=..=", "data": ["0", "1", "0","0","1"] },
+  { "name": "ALUzero", 		"wave": "0..."},  
+  { "name": "ALUSrcA",     "wave": "0101" },
+    { "name": "ALUSrcB",        "wave": "====", "data": ["0", "1", "2","0","0"] },
+  
+],
+  
+ 
+   head:{
+  text:['tspan', {class:'h3', fill:'black','font-weight':'bold'}, 'B-Type: bne x9, x18, 12'],
+   tick:0,
+   every:1
+ },
+   
+  
+    
+  "config" : { "hscale" : 2 }
+}
