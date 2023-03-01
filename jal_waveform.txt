@@ -18,6 +18,7 @@
   { "name": "MemtoReg",     "wave": "=..==", data:["0x0","0x2", "0x0"] },
 
 { "name": "RegWrite",     "wave": "0..10" },
+  { "name": "WriteRegister",     "wave": "=.=..", data:["0x0","0x1"] },
   { "name": "ALUOp",        "wave": "=....", "data": ["0"] },
   { "name": "ALUzero", 		"wave": "0...."},  
   { "name": "ALUSrcA",     "wave": "010.." },
