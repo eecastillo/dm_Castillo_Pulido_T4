@@ -6,24 +6,25 @@
   { "name": "PCWrite",     "wave": "010.1." },
   { "name": "PCSource",		"wave": "0...10"},
   { "name": "PCWriteCond",     "wave": "0....."},
-    { "name": "Alu_A",        "wave": "x=.=..", "data": ["0x400000", "0x400020"] },
-    { "name": "Alu_B",        "wave": "x=.=.", "data": ["0x4","0x0"] },
-  { "name": "ALUResult",        "wave": "====.", "data": ["0", "0x400004", "0x400008", "0x0"]},
-  { "name": "Imm",        "wave": "xx=..", "data": ["0x4"] },
-  { "name": "IR",        "wave": "x.=..", "data": ["0x004000e7"] },
-    { "name": "ALUROut",        "wave": "=.===", "data": ["0", "0x400004", "0x400008", "0x4"] },
+    { "name": "Alu_A",        "wave": "x===..", "data": ["0x400000","0x400004", "0x400020"] },
+    { "name": "Alu_B",        "wave": "x==..=", "data": ["0x4","0x0","0x4"] },
+  { "name": "ALUResult",        "wave": "x=.=.=", "data": ["0x400004", "0x400020","0x400024"]},
+  { "name": "Imm",        "wave": "xx=...", "data": ["0x0"] },
+  { "name": "IR",        "wave": "x.=...", "data": ["0x00008067"] },
+    { "name": "ALUROut",        "wave": "=.=.=.", "data": ["0", "0x400004", "0x400020"] },
     { "name": "IRWrite",     "wave": "010..1" },
   { "name": "IorD",     "wave": "0....." },
   { "name": "MemRead",     "wave": "010..1" },
-  { "name": "MemWrite",    "wave": "0...." },
-  { "name": "MemtoReg",     "wave": "x...=", "data":["0x2"] },
+  { "name": "MemWrite",    "wave": "0....." },
+  { "name": "MemtoReg",     "wave": "x...==", "data":["0x2"] },
  
-  { "name": "WriteData",     "wave": "=...=", "data":["0x0","0x400004"] },
-{ "name": "RegWrite",     "wave": "0...1" },
+  { "name": "WriteData",     "wave": "=...==", "data":["0x0","0x400004"] },
+    { "name": "WriteRegister",     "wave": "=.....", "data":["0x0"] },
+{ "name": "RegWrite",     "wave": "0...10" },
   { "name": "ALUOp",        "wave": "=..=.=", "data": ["0", "2","0"] },
-    { "name": "Func3",        "wave": "x..=.", "data": ["0"] },
+    { "name": "Func3",        "wave": "x..=.=", "data": ["0"] },
 
-  { "name": "ALUzero", 		"wave": "0...."},  
+  { "name": "ALUzero", 		"wave": "0....."},  
   { "name": "ALUSrcA",     "wave": "0..1.0" },
     { "name": "ALUSrcB",        "wave": "===..=", "data": ["0", "1", "2","1"] },
   
@@ -31,7 +32,7 @@
   
  
    head:{
-  text:['tspan', {class:'h3', fill:'black','font-weight':'bold'}, 'jalr x1, x0, 4'],
+  text:['tspan', {class:'h3', fill:'black','font-weight':'bold'}, 'jalr zero, ra, 0'],
    tick:0,
    every:1
  },
