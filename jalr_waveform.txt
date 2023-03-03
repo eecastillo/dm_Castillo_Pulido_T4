@@ -40,3 +40,4 @@
     
   "config" : { "hscale" : 2 }
 }
+ 
